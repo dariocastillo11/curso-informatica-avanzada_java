@@ -3,14 +3,14 @@ import java.util.ArrayList;
 /**
  * Una clase para mantener una arbitrariamente larga lista de notas.
  * Las notas se enumeran para la referencia externa de un usuario humano.
- * En esta versión la numeración de las notas comienzan en 0.
- * 
+ * En esta versiï¿½n la numeraciï¿½n de las notas comienzan en 0.
+ *
  * @author David J. Barnes and Michael Kolling.
  * @version 2006.03.30
  */
 public class Agenda
 {
-    // Espacio para almacenar un número arbitrario de notas.
+    // Espacio para almacenar un nï¿½mero arbitrario de notas.
     private ArrayList<String> notas;
 
     /**
@@ -32,7 +32,7 @@ public class Agenda
     }
 
     /**
-     * @return El número de notas que tiene actualmente la agenda.
+     * @return El nï¿½mero de notas que tiene actualmente la agenda.
      */
     public int numeroDeNotas()
     {
@@ -41,19 +41,32 @@ public class Agenda
 
     /**
      * Muestra una nota.
-     * @param numeroDeNota El número de nota que se mostrará.
+     * @param numeroDeNota El nï¿½mero de nota que se mostrarï¿½.
      */
     public void mostrarNota(int numeroDeNota)
     {
-        if(numeroDeNota < 0) {
-            // No es un número de nota válido, por lo tanto no se hace nada.
+        if(numeroDeNota < 0 ) {
+          
+            System.out.println("No es un nï¿½mero de nota vï¿½lido, por lo tanto no se hace nada.");
         }
         else if(numeroDeNota < numeroDeNotas()) {
-            // Es un número de nota válido,por lo tanto dse la puede mostrar.
+            // Es un nï¿½mero de nota vï¿½lido,por lo tanto dse la puede mostrar.
             System.out.println(notas.get(numeroDeNota));
         }
         else {
-            // No es un número de nota válido, por lo tanto no se hace nada.
+            
+            System.out.println("No es un nï¿½mero de nota vï¿½lido, por lo tanto no se hace nada.");
+
+        }
+    }
+    public void mostrarTodo(){
+    
+    System.out.println(notas);
+    
+    }
+    public void borrarNOtas(){
+        for(int i=0; i <notas.size();i++){
+        notas.remove(i);
         }
     }
 }
