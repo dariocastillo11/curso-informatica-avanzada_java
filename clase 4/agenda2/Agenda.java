@@ -3,14 +3,14 @@ import java.util.ArrayList;
 /**
  * Una clase para mantener una arbitrariamente larga lista de notas.
  * Las notas se enumeran para la referencia externa de un usuario humano.
- * En esta versión la numeración de las notas comienzan en 0.
- * 
+ * En esta versiï¿½n la numeraciï¿½n de las notas comienzan en 0.
+ *
  * @author David J. Barnes and Michael Kolling.
  * @version 2006.03.30
  */
 public class Agenda
 {
-    // Espacio para almacenar un número arbitrario de notas.
+    // Espacio para almacenar un nï¿½mero arbitrario de notas.
     private ArrayList<String> notas;
 
     /**
@@ -32,12 +32,13 @@ public class Agenda
     } 
 
     /**
-     * @return El número de notas que tiene actualmente la agenda.
+     * @return El nï¿½mero de notas que tiene actualmente la agenda.
      */
     public int numeroDeNotas()
     {
         return notas.size();
     } 
+    
     /**
      * Retira una nota de la genda si esta existe.
      * @param numeroDeNota The number of the note to be removed.
@@ -45,17 +46,25 @@ public class Agenda
     public void removeNote(int numeroDeNota)
     {
         if(numeroDeNota < 0) {
-             // No es un número de nota válido, por lo tanto no se hace nada.
+             // No es un nï¿½mero de nota vï¿½lido, por lo tanto no se hace nada.
         }
         else if(numeroDeNota < numeroDeNotas()) {
-            // Es un número de nota válido.
+            // Es un nï¿½mero de nota vï¿½lido.
             notas.remove(numeroDeNota);
         }
         else {
-            // No es un número de nota válido, por lo tanto no se hace nada.
+            // No es un nï¿½mero de nota vï¿½lido, por lo tanto no se hace nada.
         }
     }
 
+    public void borrarTOdo(){
+        notas.removeAll(notas);
+    }
+    
+    public void mostrarTodo(){
+        System.out.println(notas);
+    }
+    
     /**
      * Lista todas las notas en la agenda.
      */
